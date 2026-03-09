@@ -59,6 +59,7 @@ TEST_CASE("insertThird inserts as third node in a list with at least two nodes")
     Node* n4 = new Node(e4);
 
     n1->next=n2; n2->next=n3; n3->next=n4; n4->next=nullptr;
+    head = n1;
 
     Email inserted = makeEmail("new@x.com", "dest@x.com", "inserted");
     insertThird(head, inserted);
@@ -93,6 +94,7 @@ TEST_CASE("insertThird appends at end when list has exactly one node")
 
     Node* n1 = new Node(e1);
     n1->next = nullptr;
+    head = n1;
 
     Email inserted = makeEmail("new@x.com", "dest@x.com", "inserted");
     insertThird(head, inserted);
@@ -154,6 +156,7 @@ TEST_CASE("deleteFourth removes the fourth node when it exists")
     Node* n5 = new Node(e5);
 
     n1->next=n2; n2->next=n3; n3->next=n4; n4->next=n5; n5->next=nullptr;
+    head = n1;
 
     deleteFourth(head);
 
@@ -193,6 +196,7 @@ TEST_CASE("deleteFourth does nothing when list has fewer than four nodes")
     Node* n3 = new Node(e3);
 
     n1->next=n2; n2->next=n3; n3->next=nullptr;
+    head = n1;
 
     deleteFourth(head);
 
