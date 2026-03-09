@@ -1,4 +1,4 @@
-# Lab 7 - Operations on Singly Linked Lists
+# Lab 9 - Operations on Singly Linked Lists
 
 You are provided with a **utils.h** header file that implements a Email and DateTime class.
 
